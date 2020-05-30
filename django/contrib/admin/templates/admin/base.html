@@ -61,7 +61,9 @@
     <!-- END Header -->
     {% block breadcrumbs %}
     <div class="breadcrumbs">
+    {% block breadcrumbroot %}
     <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+    {% endblock %}
     {% if title %} &rsaquo; {{ title }}{% endif %}
     </div>
     {% endblock %}

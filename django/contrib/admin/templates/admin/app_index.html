@@ -6,7 +6,7 @@
 {% if not is_popup %}
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+{% block breadcrumbroot %}{{ block.super }}{% endblock %}
 &rsaquo;
 {% for app in app_list %}
 {{ app.name }}
